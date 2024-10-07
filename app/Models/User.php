@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -27,6 +28,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'web_site',
+        'presentation',
+        'status',
+        'nick_name',
     ];
 
     /**
@@ -61,5 +66,23 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    // Relación con los posts creados por el usuario
+    public function posts(): HasMany
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    // Relación con los usuarios que siguen a este usuario
+    public function followers(): HasMany
+    {
+        return $this->HasMany(Follower::class);
+    }
+
+    // Relación con los usuarios a los que sigue este usuario
+    public function following(): HasMany
+    {
+        return $this->hasMany(Follower::class, 'follower_id');
     }
 }
