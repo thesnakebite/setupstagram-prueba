@@ -13,10 +13,24 @@ export default {
     ],
 
     theme: {
+        screens: {
+            'xs': '450px',
+            'sm': '640px',
+            'md': '768px',
+            'tablet': '960px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1536px',
+            '3xl': '1920px',
+        },
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                santaregular: ["SantaRegular"],
             },
+            colors: {
+                'instagram-blue': '#0095F6',
+            }
         },
     },
 

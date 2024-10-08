@@ -5,3 +5,13 @@
 [x-cloak] {
     display: none;
 }
+
+/* fonts */
+@font-face {
+    font-family: 'SantaRegular';
+    src: url('../fonts/SantaRegular.woff2') format('woff2'),
+          url('../fonts/SantaRegular.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+}
