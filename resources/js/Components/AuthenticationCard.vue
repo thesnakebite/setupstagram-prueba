@@ -1,6 +1,10 @@
 <script setup>
     import { Link } from '@inertiajs/vue3';
-    
+    import image from '../../images/login.jpg'
+
+    defineProps({
+        image: image,
+    })
 </script>
 
 <template>
@@ -9,7 +13,7 @@
 
             <!-- Imagen portada -->
             <div class="hidden tablet:flex w-2/4">
-                <img src="../../../public/img/login.jpg" alt="">
+                <img :src="image" alt="">
             </div>
 
             <div class="flex flex-col justify-center w-full xs:w-96 py-[10px]">
@@ -21,13 +25,7 @@
                     <slot />
                 </div>
 
-                <!-- Sección de registro -->
-                <div v-if="$page.url.includes('/login')" class="mt-4 py-5 xs:border xs:border-slate-300 overflow-hidden rounded-[1px] text-center">
-                    <p class="text-sm text-black font-medium">
-                        ¿No tienes una cuenta? 
-                        <Link :href="route('register')" class="text-instagram-blue font-bold">Regístrate</Link>
-                    </p>
-                </div>
+                <slot name="register" />
             </div>
         </div>
     </div>
