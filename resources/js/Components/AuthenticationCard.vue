@@ -14,7 +14,7 @@
 
             <div class="flex flex-col justify-center w-full xs:w-96 py-[10px]">
                 <!-- Formulario Login -->
-                <div class="xs:border xs:border-slate-300 overflow-hidden rounded-[1px]">
+                <div class="xs:border xs:border-slate-300 overflow-hidden rounded-[1px] pb-4">
                     <div class="flex justify-center px-6 py-10">
                         <slot name="logo" />
                     </div>
@@ -22,7 +22,7 @@
                 </div>
 
                 <!-- Sección de registro -->
-                <div class="mt-4 py-5 xs:border xs:border-slate-300 overflow-hidden rounded-[1px] text-center">
+                <div v-if="$page.url.includes('/login')" class="mt-4 py-5 xs:border xs:border-slate-300 overflow-hidden rounded-[1px] text-center">
                     <p class="text-sm text-black font-medium">
                         ¿No tienes una cuenta? 
                         <Link :href="route('register')" class="text-instagram-blue font-bold">Regístrate</Link>

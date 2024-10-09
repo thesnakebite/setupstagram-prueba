@@ -41,36 +41,47 @@ const submit = () => {
         </div>
 
         <form @submit.prevent="submit" class="my-2">
-            <div class="flex justify-center items-center mt-4">
-                <TextInput
-                    id="email"
-                    v-model="form.email"
-                    type="email"
-                    placeholder=" "
-                    class="mt-1 block w-[73%] bg-slate-50"
-                    required
-                    autofocus
-                    autocomplete="username"
-                />
-                
-                <InputError class="mt-2" :message="form.errors.email" />
+            <div class="flex flex-col justify-center items-center">
+                <div class="relative mt-4 w-[70%]">
+                    <TextInput
+                        id="floating_email"
+                        v-model="form.email"
+                        type="email"
+                        placeholder=" "
+                        class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-4"
+                        required
+                        autocomplete="username"
+                    />
+                    
+                    <label 
+                      for="floating_email" 
+                      class="absolute text-xs text-gray-500 duration-300 transform -translate-y-2.5 scale-75 top-[0.97rem] left-2 z-10 origin-[0] peer-focus:left-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3">
+                        Correo electrónico
+                    </label>
+                    <InputError class="mt-2" :message="form.errors.email" />
+                </div>
+
+                <div class="relative mt-4 w-[70%]">
+                    <TextInput
+                        id="floating_password"
+                        v-model="form.password"
+                        type="password"
+                        placeholder=" "
+                        class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-4"
+                        required
+                        autocomplete="current-password"
+                    />
+                    <label 
+                      for="floating_password" 
+                      class="absolute text-xs text-gray-500 duration-300 transform -translate-y-2.5 scale-75 top-[0.97rem] left-2 z-10 origin-[0] peer-focus:left-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3">
+                        Contraseña
+                    </label>
+                    <InputError class="mt-2" :message="form.errors.password" />
+                </div>
             </div>
 
             <div class="flex justify-center items-center mt-4">
-                <TextInput
-                    id="password"
-                    v-model="form.password"
-                    type="password"
-                    placeholder=" "
-                    class="mt-1 block w-[73%] bg-slate-50"
-                    required
-                    autocomplete="current-password"
-                />
-                <InputError class="mt-2" :message="form.errors.password" />
-            </div>
-
-            <div class="flex justify-center items-center mt-4">
-                <PrimaryButton class="w-[73%]" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton class="w-[70%] h-[32px]" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Entrar
                 </PrimaryButton>
             </div>
