@@ -9,6 +9,7 @@ import TextInput from '@/Components/TextInput.vue';
 
 const form = useForm({
     name: '',
+    nick_name: '',
     email: '',
     password: '',
     password_confirmation: '',
@@ -72,6 +73,25 @@ const submit = () => {
                     </label>
                     <InputError class="mt-2" :message="form.errors.name" />
                 </div>
+
+                <div class="relative mt-4 w-[70%]">
+                    <TextInput 
+                      id="floating_nickName"
+                      v-model="form.nick_name"
+                      type="text"
+                      placeholder=" "
+                      class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-5"
+                      required
+                      autocomplete="username"
+                    />
+                    <label 
+                      for="floating_nickName" 
+                      class="absolute text-xs text-gray-500 duration-300 transform -translate-y-2.5 scale-75 top-[0.97rem] left-2 z-10 origin-[0] peer-focus:left-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3"
+                    >
+                        Nick name
+                    </label>
+                    <InputError class="mt-2" :message="form.errors.name" />
+                </div>
     
                 <div class="relative mt-4 w-[70%]">
                     <TextInput
@@ -81,7 +101,7 @@ const submit = () => {
                       placeholder=" "
                       class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-5"
                       required
-                      autocomplete="username"
+                      autocomplete="email"
                     />
                     <label
                       for="floating_email" 
@@ -112,7 +132,6 @@ const submit = () => {
                 </div>
     
                 <div class="relative mt-4 w-[70%]">
-                    <InputLabel for="floating_password_confirmation" value="Confirm Password" />
                     <TextInput
                         id="floating_password_confirmation"
                         v-model="form.password_confirmation"
@@ -123,7 +142,7 @@ const submit = () => {
                         autocomplete="new-password"
                     />
                     <label
-                      for="floating_password" 
+                      for="floating_password_confirmation" 
                       class="absolute text-xs text-gray-500 duration-300 transform -translate-y-2.5 scale-75 top-[0.97rem] left-2 z-10 origin-[0] peer-focus:left-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3"
                     >
                         Confirmar Contraseña
@@ -161,7 +180,7 @@ const submit = () => {
 
             <div class="flex justify-center items-center mt-4">
                 <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Entrar
+                    Siguiente
                 </PrimaryButton>
             </div>
 
