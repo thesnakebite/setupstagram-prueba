@@ -64,6 +64,7 @@ const submit = () => {
                       class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-5"
                       required
                       autocomplete="name"
+                      :error="form.errors.name"
                     />
                     <label 
                       for="floating_name" 
@@ -83,6 +84,7 @@ const submit = () => {
                       class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-5"
                       required
                       autocomplete="username"
+                      :error="form.errors.nick_name"
                     />
                     <label 
                       for="floating_nickName" 
@@ -90,7 +92,7 @@ const submit = () => {
                     >
                         Nick name
                     </label>
-                    <InputError class="mt-2" :message="form.errors.name" />
+                    <InputError class="mt-2" :message="form.errors.nick_name" />
                 </div>
     
                 <div class="relative mt-4 w-[70%]">
@@ -102,6 +104,7 @@ const submit = () => {
                       class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-5"
                       required
                       autocomplete="email"
+                      :error="form.errors.email"
                     />
                     <label
                       for="floating_email" 
@@ -121,6 +124,7 @@ const submit = () => {
                         class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-5"
                         required
                         autocomplete="new-password"
+                        :error="form.errors.password"
                     />
                     <label
                       for="floating_password" 
@@ -140,6 +144,7 @@ const submit = () => {
                         class="mt-1 block w-full h-[38px] bg-gray-50 text-xs peer px-2 pt-5"
                         required
                         autocomplete="new-password"
+                        :error="form.errors.password_confirmation"
                     />
                     <label
                       for="floating_password_confirmation" 
