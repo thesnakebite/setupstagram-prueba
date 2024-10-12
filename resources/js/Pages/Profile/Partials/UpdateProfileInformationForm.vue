@@ -17,7 +17,9 @@ const props = defineProps({
 const form = useForm({
     _method: 'PUT',
     name: props.user.name,
+    web_site: props.user.web_site,
     email: props.user.email,
+    presentation: props.user.presentation,
     photo: null,
 });
 
@@ -143,6 +145,18 @@ const clearPhotoFileInput = () => {
                 <InputError :message="form.errors.name" class="mt-2" />
             </div>
 
+            <div class="col-span-6 sm:col-span-4">
+                <InputLabel for="web_site" :value="t('Web site')" />
+                <TextInput
+                    id="web_site"
+                    v-model="form.web_site"
+                    type="text"
+                    class="mt-1 block w-full"
+                    required
+                />
+                <InputError :message="form.errors.web_site" class="mt-2" />
+            </div>
+
             <!-- Email -->
             <div class="col-span-6 sm:col-span-4">
                 <InputLabel for="email" :value="t('Email')" />
@@ -176,10 +190,22 @@ const clearPhotoFileInput = () => {
                     </div>
                 </div>
             </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <InputLabel for="presentation" :value="t('Presentation')" />
+                <TextInput
+                    id="presentation"
+                    v-model="form.presentation"
+                    type="text"
+                    class="mt-1 block w-full"
+                    required
+                />
+                <InputError :message="form.errors.presentation" class="mt-2" />
+            </div>
         </template>
 
         <template #actions>
-            <ActionMessage :on="form.recentlySuccessful" class="me-3">
+            <ActionMessage :on="form.recentlySuccessful" class="me-3 font-robotobold">
                 {{ t('Saved.') }}
             </ActionMessage>
 

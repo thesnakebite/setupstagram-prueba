@@ -89,7 +89,7 @@ const updatePassword = () => {
         </template>
 
         <template #actions>
-            <ActionMessage :on="form.recentlySuccessful" class="me-3">
+            <ActionMessage :on="form.recentlySuccessful" class="me-3 font-robotobold">
                 {{ t('Saved.') }}
             </ActionMessage>
 

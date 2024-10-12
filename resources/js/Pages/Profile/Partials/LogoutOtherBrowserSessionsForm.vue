@@ -96,7 +96,7 @@ const closeModal = () => {
                     {{ t('Log Out Other Browser Sessions') }}
                 </PrimaryButton>
 
-                <ActionMessage :on="form.recentlySuccessful" class="ms-3">
+                <ActionMessage :on="form.recentlySuccessful" class="ms-3 font-robotobold">
                     {{ t('Done.') }}
                 </ActionMessage>
             </div>
