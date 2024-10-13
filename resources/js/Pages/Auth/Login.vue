@@ -44,7 +44,7 @@ const submit = () => {
         </template>
         
         <template #logo>
-            <AuthenticationCardLogo />
+            <AuthenticationCardLogo class="text-5xl" />
         </template>
 
         <form @submit.prevent="submit" class="my-2">

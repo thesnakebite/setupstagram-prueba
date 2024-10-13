@@ -28,7 +28,7 @@ const submit = () => {
 
     <AuthenticationCard>
         <template #logo>
-            <AuthenticationCardLogo />
+            <AuthenticationCardLogo class="text-5xl" />
         </template>
 
         <div class="w-[70%] text-center m-auto">

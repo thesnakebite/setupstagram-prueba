@@ -4,6 +4,6 @@ import { Link } from '@inertiajs/vue3';
 
 <template>
     <Link :href="'/'">
-        <span class="font-santaregular text-5xl py-2">Setupstagram</span>
+        <span class="font-santaregular py-2">Setupstagram</span>
     </Link>
 </template>

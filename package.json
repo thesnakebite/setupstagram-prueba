@@ -19,6 +19,7 @@
         "vue": "^3.3.13"
     },
     "dependencies": {
-        "flowbite": "^2.5.2"
+        "flowbite": "^2.5.2",
+        "vite-svg-loader": "^5.1.0"
     }
 }
