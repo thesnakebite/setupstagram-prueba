@@ -2,7 +2,6 @@
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import AuthenticationCard from '@/Components/AuthenticationCard.vue';
 import AuthenticationCardLogo from '@/Components/AuthenticationCardLogo.vue';
-import Checkbox from '@/Components/Checkbox.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import image from '../../../images/login.jpg';
@@ -92,9 +91,9 @@ const submit = () => {
             </div>
 
             <div class="flex justify-center items-center my-4">
-                <hr class=" w-full border border-slate-200 ml-14">
+                <hr class=" w-full border border-custom-border ml-14">
                 <span class="mx-4 text-gray-500">o</span>
-                <hr class=" w-full border border-slate-200 mr-14">
+                <hr class=" w-full border border-custom-border mr-14">
             </div>
 
             <div class="flex justify-center items-center my-4">
@@ -120,13 +119,6 @@ const submit = () => {
                 <Link v-if="canResetPassword" :href="route('password.request')" class="text-xs text-gray-600">
                     ¿Has olvidado la contraseña?
                 </Link>
-                
-                <!-- <div class="block mt-4">
-                    <label class="flex items-center">
-                        <Checkbox v-model:checked="form.remember" name="remember" />
-                        <span class="ms-2 text-sm text-gray-600">Remember me</span>
-                    </label>
-                </div> -->
             </div>
 
             <!-- Opciones adicionales -->
@@ -137,10 +129,10 @@ const submit = () => {
 
         <!-- Sección de registro -->
          <template #register>
-             <div class="mt-4 py-5 xs:border xs:border-slate-300 overflow-hidden rounded-[1px] text-center">
+             <div class="mt-4 py-5 xs:border xs:border-custom-border overflow-hidden rounded-[1px] text-center">
                  <p class="text-sm text-black font-medium">
                      ¿No tienes una cuenta? 
-                     <Link :href="route('register')" class="text-instagram-blue font-bold">Regístrate</Link>
+                     <Link :href="route('register')" class="text-custom-blue font-bold">Regístrate</Link>
                  </p>
              </div>
          </template>

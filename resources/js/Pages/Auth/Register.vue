@@ -2,7 +2,6 @@
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import AuthenticationCard from '@/Components/AuthenticationCard.vue';
 import AuthenticationCardLogo from '@/Components/AuthenticationCardLogo.vue';
-import Checkbox from '@/Components/Checkbox.vue';
 import InputError from '@/Components/InputError.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
@@ -48,9 +47,9 @@ const submit = () => {
         </div>
 
         <div class="flex justify-center items-center mt-4">
-            <hr class=" w-full border border-slate-200 ml-14">
+            <hr class=" w-full border border-custom-border ml-14">
             <span class="mx-4 text-gray-500">o</span>
-            <hr class="w-full border border-slate-200 mr-14">
+            <hr class="w-full border border-custom-border mr-14">
         </div>
 
         <form @submit.prevent="submit">
@@ -154,19 +153,6 @@ const submit = () => {
                     </label>
                     <InputError class="mt-2" :message="form.errors.password_confirmation" />
                 </div>
-
-                <!-- <div v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature" class="mt-4">
-                    <InputLabel for="terms">
-                        <div class="flex items-center">
-                            <Checkbox id="terms" v-model:checked="form.terms" name="terms" required />
-    
-                            <div class="ms-2">
-                                I agree to the <a target="_blank" :href="route('terms.show')" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Terms of Service</a> and <a target="_blank" :href="route('policy.show')" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Privacy Policy</a>
-                            </div>
-                        </div>
-                        <InputError class="mt-2" :message="form.errors.terms" />
-                    </InputLabel>
-                </div> -->
             </div>
 
             <!-- Opciones información -->
@@ -197,10 +183,10 @@ const submit = () => {
 
         <!-- Sección de registro -->
         <template #login>
-             <div class="mt-4 py-5 xs:border xs:border-slate-300 overflow-hidden rounded-[1px] text-center">
+             <div class="mt-4 py-5 xs:border xs:border-custom-border overflow-hidden rounded-[1px] text-center">
                  <p class="text-sm text-black font-medium">
                      ¿Tienes una cuenta? 
-                     <Link :href="route('login')" class="text-instagram-blue font-bold">Entrar</Link>
+                     <Link :href="route('login')" class="text-custom-blue font-bold">Entrar</Link>
                  </p>
              </div>
          </template>

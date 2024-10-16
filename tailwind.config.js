@@ -20,7 +20,7 @@ export default {
             'md': '768px',
             'tablet': '960px',
             'lg': '1024px',
-            'xl': '1280px',
+            'xl': '1264px',
             '2xl': '1536px',
             '3xl': '1920px',
         },
@@ -32,7 +32,8 @@ export default {
                 santaregular: ["SantaRegular"],
             },
             colors: {
-                'instagram-blue': '#0095F6',
+                'custom-blue': '#0095F6',
+                'custom-border': '#DBDBDB',
             }
         },
     },
