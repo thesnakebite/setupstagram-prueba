@@ -27,11 +27,7 @@ const closeOnEscape = (e) => {
 onMounted(() => document.addEventListener('keydown', closeOnEscape));
 onUnmounted(() => document.removeEventListener('keydown', closeOnEscape));
 
-const widthClass = computed(() => {
-    return {
-        '48': 'w-48',
-    }[props.width.toString()];
-});
+const widthClass = computed(() => 'w-[375px]');
 
 const alignmentClasses = computed(() => {
     if (props.align === 'left') {
@@ -70,7 +66,7 @@ const alignmentClasses = computed(() => {
                 style="display: none;"
                 @click="open = false"
             >
-                <div class="rounded-md ring-1 ring-black ring-opacity-5" :class="contentClasses">
+                <div class="rounded-md ring-1 ring-black ring-opacity-5 h-fit" :class="contentClasses">
                     <slot name="content" />
                 </div>
             </div>

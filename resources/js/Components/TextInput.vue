@@ -22,7 +22,7 @@ defineExpose({ focus: () => input.value.focus() });
 <template>
     <input
         ref="input"
-        class="border focus:ring-0 rounded-[1px]"
+        class="border focus:ring-0 rounded-[1px] h-8"
         :class="{
             'border border-red-500': error,
             'border border-gray-300 focus:border-gray-400': !error
