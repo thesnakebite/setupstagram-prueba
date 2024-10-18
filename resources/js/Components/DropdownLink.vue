@@ -9,7 +9,7 @@ defineProps({
 
 <template>
     <div>
-        <button v-if="as == 'button'" type="submit" class="flex items-center gap-3">
+        <button v-if="as == 'button'" type="submit" class="flex gap-3 text-base">
             <slot />
         </button>
 

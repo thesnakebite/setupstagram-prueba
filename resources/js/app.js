@@ -1,6 +1,7 @@
 import './bootstrap';
 import '../css/app.css';
 import 'flowbite';
+import '/node_modules/flowbite-vue/dist/index.css';
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';

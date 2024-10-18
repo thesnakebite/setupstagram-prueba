@@ -1,6 +1,7 @@
 <script setup>
     import { router } from '@inertiajs/vue3';
     import NavLink from '@/Components/NavLink.vue';
+    import DropdownLink from '@/Components/DropdownLink.vue';
     import IconHome from '../../svg/home.svg';
     import IconUser from '../../svg/user.svg';
     import IconExit from '../../svg/exit.svg';

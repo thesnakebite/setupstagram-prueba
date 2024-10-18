@@ -3,6 +3,10 @@
     import SearchMobile from '@/Components/SearchMobile.vue';
     import Sidebar from '@/Components/Sidebar.vue';
     import BottomNav from '@/Components/BottomNav.vue';
+
+    defineProps({
+        title: String,
+    });
 </script>
 
 <template>
@@ -13,7 +17,7 @@
         <!-- Sidebar -->
         <aside 
           id="default-sidebar" 
-          class="hidden md:block w-[72px] xl:w-[244px] 3xl:w-[336px] bg-white border-r border-custom-border" 
+          class="hidden md:block fixed h-full w-[72px] xl:w-[244px] 3xl:w-[336px] bg-white border-r border-custom-border" 
           aria-label="Sidebar"
         >
         

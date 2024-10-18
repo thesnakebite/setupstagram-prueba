@@ -57,7 +57,7 @@ const widthClass = computed(() => {
                 style="display: none;"
                 @click="open = false"
             >
-                <div class="h-full overflow-y-auto rounded-br-2xl rounded-tr-2xl" :class="contentClasses">
+                <div class="h-full overflow-y-auto rounded-br-2xl rounded-tr-2xl" :class="contentClasses" @click.stop>
                     <slot name="content" />
                 </div>
             </div>
