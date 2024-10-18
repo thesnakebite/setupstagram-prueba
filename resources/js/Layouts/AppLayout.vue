@@ -1,6 +1,6 @@
 <script setup>
     import { Head } from '@inertiajs/vue3';
-    import SearchMobile from '@/Components/SearchMobile.vue';
+    import MobileBar from '@/Components/MobileBar.vue';
     import Sidebar from '@/Components/Sidebar.vue';
     import BottomNav from '@/Components/BottomNav.vue';
 
@@ -25,7 +25,7 @@
         </aside>
         <!-- Main -->
         <div class="flex-1">
-            <SearchMobile class="md:hidden" />
+            <MobileBar class="md:hidden" />
 
             <main class="p-6">
                 <slot />
