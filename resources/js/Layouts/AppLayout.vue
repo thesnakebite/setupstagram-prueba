@@ -27,7 +27,7 @@
         <div class="flex-1 ml-0 md:ml-[72px] xl:ml-[244px] 3xl:ml-[336px] my-16 md:my-0 overflow-y-auto">
             <MobileBar class="md:hidden" />
 
-            <main class="p-6">
+            <main class="flex flex-col min-h-screen">
                 <slot />
             </main>
 
